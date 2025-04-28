@@ -19,7 +19,7 @@ struct SelectedGiftView: View {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 20) {
                     HStack {
-                        AsyncImageView(width: 60, height: 60, cornerRadius: 5, imageURL: URL(string: ""), systemPlaceholder: "photo")
+//                        AsyncImageView(width: 60, height: 60, cornerRadius: 5, imageURL: URL(string: ""), systemPlaceholder: "photo")
                         
                         VStack(alignment: .leading) {
                             Text("سلة ورد")

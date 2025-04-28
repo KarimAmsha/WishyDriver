@@ -9,6 +9,17 @@ import Foundation
 import MapKit
 
 class Utilities: NSObject {
+    static func convertDateStringToDate(stringDate: String, outputFormat: String) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" // Input format
+        guard let date = dateFormatter.date(from: stringDate) else {
+            return nil // Return nil if input string is not in the expected format
+        }
+        
+        dateFormatter.dateFormat = outputFormat // Output format
+        return dateFormatter.string(from: date)
+    }
+
     static func generateChatID(user1ID: String, user2ID: String) -> String {
         return "\(user1ID)-\(user2ID)"
     }

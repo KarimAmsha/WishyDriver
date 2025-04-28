@@ -256,8 +256,8 @@
 "Edit Address" = "تعديل العنوان";
 "Select Address" = "اختر العنوان";
 "Verify" = "تحقق";
-"Underway" = "قيد التنفيذ!";
-"Progress" = "قيد التنفيذ";
+"Underway" = "قيد التسليم!";
+"Progress" = "قيد التسليم";
 "Updated" = "المعدلة";
 "No orders found" = "لا يوجد طلبات";
 "Start Order" = "بدء الطلب";
@@ -507,3 +507,6 @@
 "Friend Wishes" = "أمنيات صديق!";
 "Public Lists" = "القوائم العلنية";
 "Retail System" = "نظام القَطَّة";
+"Go To Login" = "الذهاب الى تسجيل الدخول";
+"Please login to see the contents" = "الرجاء تسجيل الدخول لرؤية المحتوى";
+"Availability Enabled" = "تفعيل/ اغلاق استقبال الطلبات";

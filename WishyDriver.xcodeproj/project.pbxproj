@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E41E1FA2BE93B5C0061AC47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E41E1F92BE93B5C0061AC47 /* GoogleService-Info.plist */; };
+		1E00533D2C1F2A4F00C75E42 /* ShowOrderOnMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E00533C2C1F2A4E00C75E42 /* ShowOrderOnMapView.swift */; };
+		1E00533F2C1F2A6700C75E42 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E00533E2C1F2A6700C75E42 /* Mark.swift */; };
 		1E41E1FC2BE942490061AC47 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E41E1FB2BE942490061AC47 /* FirestoreService.swift */; };
 		1E5F318B2BE23C9B00E5A914 /* FriendWishesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F318A2BE23C9B00E5A914 /* FriendWishesListView.swift */; };
 		1E5F318D2BE23E5100E5A914 /* FriendWishesDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F318C2BE23E5100E5A914 /* FriendWishesDetailsView.swift */; };
@@ -15,6 +16,22 @@
 		1E5F31912BE2414B00E5A914 /* RetailPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F31902BE2414B00E5A914 /* RetailPaymentView.swift */; };
 		1E60849A2BE0037A007D83B1 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6084992BE0037A007D83B1 /* SearchBar.swift */; };
 		1E6084B02BE042C6007D83B1 /* WishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6084AF2BE042C6007D83B1 /* WishesView.swift */; };
+		1EA6D3312C1DC1ED007E8AE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EA6D3302C1DC1ED007E8AE0 /* GoogleService-Info.plist */; };
+		1EA6D3352C1E0D18007E8AE0 /* CustomeEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D3342C1E0D18007E8AE0 /* CustomeEmptyView.swift */; };
+		1EA6D3372C1E0DFB007E8AE0 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D3362C1E0DFB007E8AE0 /* OrderViewModel.swift */; };
+		1EA6D3392C1E0E97007E8AE0 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D3382C1E0E97007E8AE0 /* Order.swift */; };
+		1EA6D33B2C1E0EB3007E8AE0 /* Supplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D33A2C1E0EB3007E8AE0 /* Supplier.swift */; };
+		1EA6D33D2C1E0ED2007E8AE0 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D33C2C1E0ED2007E8AE0 /* Products.swift */; };
+		1EA6D33F2C1E0F1E007E8AE0 /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D33E2C1E0F1E007E8AE0 /* OrderDetails.swift */; };
+		1EA6D3412C1E114F007E8AE0 /* OrderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D3402C1E114F007E8AE0 /* OrderItemView.swift */; };
+		1EA6D3442C1E3E62007E8AE0 /* NotificationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D3432C1E3E62007E8AE0 /* NotificationRowView.swift */; };
+		1EA6D3462C1E3E73007E8AE0 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D3452C1E3E73007E8AE0 /* NotificationsView.swift */; };
+		1EA6D3482C1E3E88007E8AE0 /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D3472C1E3E88007E8AE0 /* NotificationItem.swift */; };
+		1EA6D34A2C1E3EA0007E8AE0 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D3492C1E3EA0007E8AE0 /* NotificationsViewModel.swift */; };
+		1EA6D34C2C1E3F0F007E8AE0 /* NotificationsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D34B2C1E3F0F007E8AE0 /* NotificationsStruct.swift */; };
+		1EA6D34E2C1E45FC007E8AE0 /* GridViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D34D2C1E45FC007E8AE0 /* GridViewItem.swift */; };
+		1EA6D3502C1E460F007E8AE0 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D34F2C1E460F007E8AE0 /* GridView.swift */; };
+		1EA6D3522C1E4756007E8AE0 /* OrderStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA6D3512C1E4756007E8AE0 /* OrderStatistics.swift */; };
 		1ECC94512BDC578A002BFE54 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC94502BDC578A002BFE54 /* LoadingView.swift */; };
 		1ECC94542BDC57D3002BFE54 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC94532BDC57D3002BFE54 /* APIEndpoint.swift */; };
 		1ECC94562BDC57EA002BFE54 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECC94552BDC57EA002BFE54 /* APIClient.swift */; };
@@ -133,7 +150,7 @@
 		1EDEF66F2BE1747A00863C10 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF66E2BE1747A00863C10 /* EditProfileView.swift */; };
 		1EDEF6712BE1761F00863C10 /* ConstantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6702BE1761F00863C10 /* ConstantView.swift */; };
 		1EDEF6732BE1764200863C10 /* HTMLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6722BE1764200863C10 /* HTMLView.swift */; };
-		1EDEF6762BE1788300863C10 /* MyOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6752BE1788300863C10 /* MyOrdersView.swift */; };
+		1EDEF6762BE1788300863C10 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6752BE1788300863C10 /* OrdersView.swift */; };
 		1EDEF6782BE17C0C00863C10 /* OrderDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6772BE17C0C00863C10 /* OrderDetailsView.swift */; };
 		1EDEF67B2BE18D6D00863C10 /* UpcomingRemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF67A2BE18D6D00863C10 /* UpcomingRemindersView.swift */; };
 		1EDEF67D2BE1930C00863C10 /* OtherWishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF67C2BE1930C00863C10 /* OtherWishListView.swift */; };
@@ -142,22 +159,40 @@
 		1EDEF6832BE1A1D200863C10 /* SelectedGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6822BE1A1D200863C10 /* SelectedGiftView.swift */; };
 		1EDEF6852BE1A93600863C10 /* FriendWishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6842BE1A93600863C10 /* FriendWishesView.swift */; };
 		1EDEF6872BE1ABDF00863C10 /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6862BE1ABDF00863C10 /* ProgressLineView.swift */; };
-		1EEC2BD02BD83E6000975953 /* WishyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2BCF2BD83E6000975953 /* WishyApp.swift */; };
+		1EEC2BD02BD83E6000975953 /* WishyDriverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2BCF2BD83E6000975953 /* WishyDriverApp.swift */; };
 		1EEC2BD22BD83E6000975953 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2BD12BD83E6000975953 /* ContentView.swift */; };
 		1EEC2BD42BD83E6300975953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC2BD32BD83E6300975953 /* Assets.xcassets */; };
 		1EEC2BD72BD83E6300975953 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC2BD62BD83E6300975953 /* Preview Assets.xcassets */; };
+		C94DA65AAD73467E7F7CB494 /* Pods_WishyDriver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D61FEF39129166B1263D58 /* Pods_WishyDriver.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E41E1F92BE93B5C0061AC47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E00533C2C1F2A4E00C75E42 /* ShowOrderOnMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowOrderOnMapView.swift; sourceTree = "<group>"; };
+		1E00533E2C1F2A6700C75E42 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
 		1E41E1FB2BE942490061AC47 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
-		1E41E1FD2BE947560061AC47 /* Wishy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wishy.entitlements; sourceTree = "<group>"; };
+		1E41E1FD2BE947560061AC47 /* WishyDriver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WishyDriver.entitlements; sourceTree = "<group>"; };
 		1E5F318A2BE23C9B00E5A914 /* FriendWishesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendWishesListView.swift; sourceTree = "<group>"; };
 		1E5F318C2BE23E5100E5A914 /* FriendWishesDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendWishesDetailsView.swift; sourceTree = "<group>"; };
 		1E5F318E2BE23F3E00E5A914 /* RetailFriendWishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailFriendWishesView.swift; sourceTree = "<group>"; };
 		1E5F31902BE2414B00E5A914 /* RetailPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailPaymentView.swift; sourceTree = "<group>"; };
 		1E6084992BE0037A007D83B1 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		1E6084AF2BE042C6007D83B1 /* WishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishesView.swift; sourceTree = "<group>"; };
+		1EA6D3302C1DC1ED007E8AE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1EA6D3342C1E0D18007E8AE0 /* CustomeEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeEmptyView.swift; sourceTree = "<group>"; };
+		1EA6D3362C1E0DFB007E8AE0 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		1EA6D3382C1E0E97007E8AE0 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		1EA6D33A2C1E0EB3007E8AE0 /* Supplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supplier.swift; sourceTree = "<group>"; };
+		1EA6D33C2C1E0ED2007E8AE0 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		1EA6D33E2C1E0F1E007E8AE0 /* OrderDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetails.swift; sourceTree = "<group>"; };
+		1EA6D3402C1E114F007E8AE0 /* OrderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemView.swift; sourceTree = "<group>"; };
+		1EA6D3432C1E3E62007E8AE0 /* NotificationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRowView.swift; sourceTree = "<group>"; };
+		1EA6D3452C1E3E73007E8AE0 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		1EA6D3472C1E3E88007E8AE0 /* NotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
+		1EA6D3492C1E3EA0007E8AE0 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		1EA6D34B2C1E3F0F007E8AE0 /* NotificationsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsStruct.swift; sourceTree = "<group>"; };
+		1EA6D34D2C1E45FC007E8AE0 /* GridViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewItem.swift; sourceTree = "<group>"; };
+		1EA6D34F2C1E460F007E8AE0 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		1EA6D3512C1E4756007E8AE0 /* OrderStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatistics.swift; sourceTree = "<group>"; };
 		1ECC94502BDC578A002BFE54 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1ECC94532BDC57D3002BFE54 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		1ECC94552BDC57EA002BFE54 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -249,7 +284,7 @@
 		1EDEF66E2BE1747A00863C10 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		1EDEF6702BE1761F00863C10 /* ConstantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantView.swift; sourceTree = "<group>"; };
 		1EDEF6722BE1764200863C10 /* HTMLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLView.swift; sourceTree = "<group>"; };
-		1EDEF6752BE1788300863C10 /* MyOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersView.swift; sourceTree = "<group>"; };
+		1EDEF6752BE1788300863C10 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
 		1EDEF6772BE17C0C00863C10 /* OrderDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsView.swift; sourceTree = "<group>"; };
 		1EDEF67A2BE18D6D00863C10 /* UpcomingRemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingRemindersView.swift; sourceTree = "<group>"; };
 		1EDEF67C2BE1930C00863C10 /* OtherWishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherWishListView.swift; sourceTree = "<group>"; };
@@ -258,11 +293,14 @@
 		1EDEF6822BE1A1D200863C10 /* SelectedGiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGiftView.swift; sourceTree = "<group>"; };
 		1EDEF6842BE1A93600863C10 /* FriendWishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendWishesView.swift; sourceTree = "<group>"; };
 		1EDEF6862BE1ABDF00863C10 /* ProgressLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLineView.swift; sourceTree = "<group>"; };
-		1EEC2BCC2BD83E6000975953 /* Wishy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wishy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EEC2BCF2BD83E6000975953 /* WishyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishyApp.swift; sourceTree = "<group>"; };
+		1EEC2BCC2BD83E6000975953 /* WishyDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishyDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EEC2BCF2BD83E6000975953 /* WishyDriverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishyDriverApp.swift; sourceTree = "<group>"; };
 		1EEC2BD12BD83E6000975953 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EEC2BD32BD83E6300975953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EEC2BD62BD83E6300975953 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		66E29656BD4F235872BDB0E7 /* Pods-WishyDriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishyDriver.release.xcconfig"; path = "Target Support Files/Pods-WishyDriver/Pods-WishyDriver.release.xcconfig"; sourceTree = "<group>"; };
+		C5D61FEF39129166B1263D58 /* Pods_WishyDriver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WishyDriver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D547D83EF7234739A1E2E211 /* Pods-WishyDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishyDriver.debug.xcconfig"; path = "Target Support Files/Pods-WishyDriver/Pods-WishyDriver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +337,7 @@
 				1ECC948D2BDC5D8B002BFE54 /* FirebaseAppDistribution-Beta in Frameworks */,
 				1ECC94992BDC5D8B002BFE54 /* FirebaseDynamicLinks in Frameworks */,
 				1ECC949F2BDC5D8B002BFE54 /* FirebaseFirestoreSwift in Frameworks */,
+				C94DA65AAD73467E7F7CB494 /* Pods_WishyDriver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,10 +358,19 @@
 			path = Wishes;
 			sourceTree = "<group>";
 		};
+		1EA6D3422C1E3E53007E8AE0 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				1EA6D3432C1E3E62007E8AE0 /* NotificationRowView.swift */,
+				1EA6D3452C1E3E73007E8AE0 /* NotificationsView.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		1ECC94472BDC56B8002BFE54 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1EEC2BCF2BD83E6000975953 /* WishyApp.swift */,
+				1EEC2BCF2BD83E6000975953 /* WishyDriverApp.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -330,7 +378,7 @@
 		1ECC94482BDC56C0002BFE54 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1E41E1F92BE93B5C0061AC47 /* GoogleService-Info.plist */,
+				1EA6D3302C1DC1ED007E8AE0 /* GoogleService-Info.plist */,
 				1EEC2BD32BD83E6300975953 /* Assets.xcassets */,
 				1ECC950E2BDD166A002BFE54 /* CountryNumbers.json */,
 				1ECC95202BDD1C21002BFE54 /* Localizable.strings */,
@@ -372,6 +420,8 @@
 				1ECC95382BDD81EF002BFE54 /* LocationManager.swift */,
 				1ECC953A2BDD8275002BFE54 /* MediaPickerViewModel.swift */,
 				1ECC953C2BDD8298002BFE54 /* UserViewModel.swift */,
+				1EA6D3362C1E0DFB007E8AE0 /* OrderViewModel.swift */,
+				1EA6D3492C1E3EA0007E8AE0 /* NotificationsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -379,6 +429,7 @@
 		1ECC944C2BDC56E6002BFE54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1EA6D3422C1E3E53007E8AE0 /* Notifications */,
 				1EDEF6792BE18CC100863C10 /* Reminder */,
 				1EDEF6742BE1787500863C10 /* Orders */,
 				1EDEF6692BE167E400863C10 /* Profile */,
@@ -407,6 +458,14 @@
 				1ECC95012BDD147D002BFE54 /* APIResponse.swift */,
 				1ECC95032BDD14A0002BFE54 /* Pagination.swift */,
 				1ECC950C2BDD1642002BFE54 /* CPData.swift */,
+				1EA6D3382C1E0E97007E8AE0 /* Order.swift */,
+				1EA6D33A2C1E0EB3007E8AE0 /* Supplier.swift */,
+				1EA6D33C2C1E0ED2007E8AE0 /* Products.swift */,
+				1EA6D33E2C1E0F1E007E8AE0 /* OrderDetails.swift */,
+				1EA6D3472C1E3E88007E8AE0 /* NotificationItem.swift */,
+				1EA6D34B2C1E3F0F007E8AE0 /* NotificationsStruct.swift */,
+				1EA6D3512C1E4756007E8AE0 /* OrderStatistics.swift */,
+				1E00533E2C1F2A6700C75E42 /* Mark.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -446,6 +505,7 @@
 				1ECC94BE2BDC5E48002BFE54 /* RootPresentationModeKey.swift */,
 				1ECC94BB2BDC5E47002BFE54 /* RoundedCorner.swift */,
 				1ECC94C62BDC5E49002BFE54 /* WithPopover.swift */,
+				1EA6D3342C1E0D18007E8AE0 /* CustomeEmptyView.swift */,
 			);
 			path = "Modifiers+Styles+UIViewControllerRepresentable";
 			sourceTree = "<group>";
@@ -553,6 +613,8 @@
 			children = (
 				1ECC95432BDDAC4A002BFE54 /* HomeView.swift */,
 				1E6084992BE0037A007D83B1 /* SearchBar.swift */,
+				1EA6D34D2C1E45FC007E8AE0 /* GridViewItem.swift */,
+				1EA6D34F2C1E460F007E8AE0 /* GridView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -593,8 +655,10 @@
 		1EDEF6742BE1787500863C10 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
-				1EDEF6752BE1788300863C10 /* MyOrdersView.swift */,
+				1EDEF6752BE1788300863C10 /* OrdersView.swift */,
 				1EDEF6772BE17C0C00863C10 /* OrderDetailsView.swift */,
+				1EA6D3402C1E114F007E8AE0 /* OrderItemView.swift */,
+				1E00533C2C1F2A4E00C75E42 /* ShowOrderOnMapView.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -610,24 +674,25 @@
 		1EEC2BC32BD83E6000975953 = {
 			isa = PBXGroup;
 			children = (
-				1EEC2BCE2BD83E6000975953 /* Wishy */,
+				1EEC2BCE2BD83E6000975953 /* WishyDriver */,
 				1EEC2BCD2BD83E6000975953 /* Products */,
 				304E035519AD4FBEEEDC9A60 /* Pods */,
+				920B7FF172389F6D3DD7A63D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1EEC2BCD2BD83E6000975953 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EEC2BCC2BD83E6000975953 /* Wishy.app */,
+				1EEC2BCC2BD83E6000975953 /* WishyDriver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1EEC2BCE2BD83E6000975953 /* Wishy */ = {
+		1EEC2BCE2BD83E6000975953 /* WishyDriver */ = {
 			isa = PBXGroup;
 			children = (
-				1E41E1FD2BE947560061AC47 /* Wishy.entitlements */,
+				1E41E1FD2BE947560061AC47 /* WishyDriver.entitlements */,
 				1ECC94E52BDC638A002BFE54 /* Info.plist */,
 				1ECC944D2BDC56EE002BFE54 /* Models */,
 				1ECC944C2BDC56E6002BFE54 /* Views */,
@@ -638,7 +703,7 @@
 				1ECC94472BDC56B8002BFE54 /* Supporting Files */,
 				1EEC2BD52BD83E6300975953 /* Preview Content */,
 			);
-			path = Wishy;
+			path = WishyDriver;
 			sourceTree = "<group>";
 		};
 		1EEC2BD52BD83E6300975953 /* Preview Content */ = {
@@ -652,17 +717,28 @@
 		304E035519AD4FBEEEDC9A60 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				D547D83EF7234739A1E2E211 /* Pods-WishyDriver.debug.xcconfig */,
+				66E29656BD4F235872BDB0E7 /* Pods-WishyDriver.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		920B7FF172389F6D3DD7A63D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5D61FEF39129166B1263D58 /* Pods_WishyDriver.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1EEC2BCB2BD83E6000975953 /* Wishy */ = {
+		1EEC2BCB2BD83E6000975953 /* WishyDriver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EEC2BDA2BD83E6300975953 /* Build configuration list for PBXNativeTarget "Wishy" */;
+			buildConfigurationList = 1EEC2BDA2BD83E6300975953 /* Build configuration list for PBXNativeTarget "WishyDriver" */;
 			buildPhases = (
+				2AB01AB3A52810E03031D1CC /* [CP] Check Pods Manifest.lock */,
 				1EEC2BC82BD83E6000975953 /* Sources */,
 				1EEC2BC92BD83E6000975953 /* Frameworks */,
 				1EEC2BCA2BD83E6000975953 /* Resources */,
@@ -671,7 +747,7 @@
 			);
 			dependencies = (
 			);
-			name = Wishy;
+			name = WishyDriver;
 			packageProductDependencies = (
 				1ECC94822BDC5D8B002BFE54 /* FirebaseAnalytics */,
 				1ECC94842BDC5D8B002BFE54 /* FirebaseAnalyticsOnDeviceConversion */,
@@ -704,7 +780,7 @@
 				1ECC95292BDD2B02002BFE54 /* Alamofire */,
 			);
 			productName = Wishy;
-			productReference = 1EEC2BCC2BD83E6000975953 /* Wishy.app */;
+			productReference = 1EEC2BCC2BD83E6000975953 /* WishyDriver.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -722,7 +798,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1EEC2BC72BD83E6000975953 /* Build configuration list for PBXProject "Wishy" */;
+			buildConfigurationList = 1EEC2BC72BD83E6000975953 /* Build configuration list for PBXProject "WishyDriver" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = ar;
 			hasScannedForEncodings = 0;
@@ -733,15 +809,15 @@
 			);
 			mainGroup = 1EEC2BC32BD83E6000975953;
 			packageReferences = (
-				1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */,
-				1ECC94B82BDC5E17002BFE54 /* XCRemoteSwiftPackageReference "PopupView.git" */,
-				1ECC95282BDD2B02002BFE54 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				1ECC94B82BDC5E17002BFE54 /* XCRemoteSwiftPackageReference "PopupView" */,
+				1ECC95282BDD2B02002BFE54 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1EEC2BCD2BD83E6000975953 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1EEC2BCB2BD83E6000975953 /* Wishy */,
+				1EEC2BCB2BD83E6000975953 /* WishyDriver */,
 			);
 		};
 /* End PBXProject section */
@@ -758,20 +834,45 @@
 				1ECC95222BDD1C21002BFE54 /* Localizable.strings in Resources */,
 				1EEC2BD42BD83E6300975953 /* Assets.xcassets in Resources */,
 				1ECC94E12BDC6362002BFE54 /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
-				1E41E1FA2BE93B5C0061AC47 /* GoogleService-Info.plist in Resources */,
 				1ECC94E32BDC6362002BFE54 /* IBMPlexSansArabic-Regular.ttf in Resources */,
 				1ECC94E02BDC6362002BFE54 /* IBMPlexSansArabic-Light.ttf in Resources */,
+				1EA6D3312C1DC1ED007E8AE0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AB01AB3A52810E03031D1CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WishyDriver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1EEC2BC82BD83E6000975953 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EDEF6762BE1788300863C10 /* MyOrdersView.swift in Sources */,
+				1EDEF6762BE1788300863C10 /* OrdersView.swift in Sources */,
 				1E41E1FC2BE942490061AC47 /* FirestoreService.swift in Sources */,
 				1E5F31912BE2414B00E5A914 /* RetailPaymentView.swift in Sources */,
 				1ECC952F2BDD75E7002BFE54 /* MobileView.swift in Sources */,
@@ -782,6 +883,7 @@
 				1ECC94CF2BDC5E49002BFE54 /* ButtonsStyles.swift in Sources */,
 				1ECC94C92BDC5E49002BFE54 /* CustomMapAnnotation.swift in Sources */,
 				1EEC2BD22BD83E6000975953 /* ContentView.swift in Sources */,
+				1E00533F2C1F2A6700C75E42 /* Mark.swift in Sources */,
 				1ECC94D82BDC5FF7002BFE54 /* CustomModel.swift in Sources */,
 				1ECC95142BDD17D1002BFE54 /* AlertView.swift in Sources */,
 				1EDEF66D2BE1689200863C10 /* CustomListItem.swift in Sources */,
@@ -804,22 +906,28 @@
 				1ECC951D2BDD1874002BFE54 /* CustomTextField.swift in Sources */,
 				1ECC94F62BDD1291002BFE54 /* UserSettings.swift in Sources */,
 				1EDEF6812BE19DA000863C10 /* ProductDetailsView.swift in Sources */,
+				1EA6D3372C1E0DFB007E8AE0 /* OrderViewModel.swift in Sources */,
 				1ECC946A2BDC5B68002BFE54 /* Int64+Extensions.swift in Sources */,
-				1EEC2BD02BD83E6000975953 /* WishyApp.swift in Sources */,
+				1EA6D34C2C1E3F0F007E8AE0 /* NotificationsStruct.swift in Sources */,
+				1EEC2BD02BD83E6000975953 /* WishyDriverApp.swift in Sources */,
 				1ECC95312BDD77B5002BFE54 /* SMSVerificationView.swift in Sources */,
 				1ECC94C82BDC5E49002BFE54 /* RoundedCorner.swift in Sources */,
 				1ECC94FE2BDD1379002BFE54 /* AuthViewModel.swift in Sources */,
+				1EA6D33F2C1E0F1E007E8AE0 /* OrderDetails.swift in Sources */,
 				1EDEF6662BE0E6B600863C10 /* CartView.swift in Sources */,
 				1ECC94512BDC578A002BFE54 /* LoadingView.swift in Sources */,
 				1ECC94D62BDC5FB1002BFE54 /* AlertModel.swift in Sources */,
 				1EDEF6732BE1764200863C10 /* HTMLView.swift in Sources */,
 				1ECC94732BDC5B68002BFE54 /* View+Extensions.swift in Sources */,
+				1EA6D3522C1E4756007E8AE0 /* OrderStatistics.swift in Sources */,
 				1ECC95162BDD17E4002BFE54 /* InputAlertView.swift in Sources */,
+				1EA6D33B2C1E0EB3007E8AE0 /* Supplier.swift in Sources */,
 				1ECC953F2BDDA9EF002BFE54 /* DateTimePicker.swift in Sources */,
 				1ECC95002BDD13D7002BFE54 /* ConstantItem.swift in Sources */,
 				1EDEF6632BE0E57E00863C10 /* CategoriesView.swift in Sources */,
 				1ECC94FA2BDD130F002BFE54 /* InitialViewModel.swift in Sources */,
 				1ECC94D02BDC5E49002BFE54 /* OtpModifer.swift in Sources */,
+				1E00533D2C1F2A4F00C75E42 /* ShowOrderOnMapView.swift in Sources */,
 				1ECC95442BDDAC4A002BFE54 /* HomeView.swift in Sources */,
 				1EDEF66F2BE1747A00863C10 /* EditProfileView.swift in Sources */,
 				1EDEF6782BE17C0C00863C10 /* OrderDetailsView.swift in Sources */,
@@ -834,13 +942,16 @@
 				1ECC95072BDD1587002BFE54 /* AuthenticationView.swift in Sources */,
 				1ECC947A2BDC5B8B002BFE54 /* Enum.swift in Sources */,
 				1ECC94562BDC57EA002BFE54 /* APIClient.swift in Sources */,
+				1EA6D3442C1E3E62007E8AE0 /* NotificationRowView.swift in Sources */,
 				1ECC95022BDD147D002BFE54 /* APIResponse.swift in Sources */,
 				1ECC94CD2BDC5E49002BFE54 /* ImagePicker.swift in Sources */,
 				1ECC94EC2BDC6A8C002BFE54 /* WelcomeItem.swift in Sources */,
 				1E5F318F2BE23F3E00E5A914 /* RetailFriendWishesView.swift in Sources */,
 				1EDEF66B2BE167F200863C10 /* ProfileView.swift in Sources */,
 				1ECC94D32BDC5E49002BFE54 /* WithPopover.swift in Sources */,
+				1EA6D3352C1E0D18007E8AE0 /* CustomeEmptyView.swift in Sources */,
 				1ECC94F42BDD1254002BFE54 /* Monitor.swift in Sources */,
+				1EA6D3502C1E460F007E8AE0 /* GridView.swift in Sources */,
 				1ECC94752BDC5B68002BFE54 /* URL+Extensions.swift in Sources */,
 				1EDEF67B2BE18D6D00863C10 /* UpcomingRemindersView.swift in Sources */,
 				1ECC94CC2BDC5E49002BFE54 /* CustomFont.swift in Sources */,
@@ -855,17 +966,24 @@
 				1EDEF6852BE1A93600863C10 /* FriendWishesView.swift in Sources */,
 				1EDEF67D2BE1930C00863C10 /* OtherWishListView.swift in Sources */,
 				1ECC95182BDD17FA002BFE54 /* FloatingPickerView.swift in Sources */,
+				1EA6D33D2C1E0ED2007E8AE0 /* Products.swift in Sources */,
 				1ECC952D2BDD2C02002BFE54 /* MainView.swift in Sources */,
+				1EA6D34E2C1E45FC007E8AE0 /* GridViewItem.swift in Sources */,
 				1ECC94792BDC5B8B002BFE54 /* Constants.swift in Sources */,
 				1ECC94CA2BDC5E49002BFE54 /* DismissingKeyboard.swift in Sources */,
 				1ECC946C2BDC5B68002BFE54 /* Encodable+Extensions.swift in Sources */,
 				1ECC94F22BDD1215002BFE54 /* AppRouter.swift in Sources */,
 				1ECC953B2BDD8275002BFE54 /* MediaPickerViewModel.swift in Sources */,
 				1ECC94FC2BDD133A002BFE54 /* DataProvider.swift in Sources */,
+				1EA6D3482C1E3E88007E8AE0 /* NotificationItem.swift in Sources */,
+				1EA6D3392C1E0E97007E8AE0 /* Order.swift in Sources */,
 				1ECC951E2BDD1874002BFE54 /* CustomTextFieldWithTitle.swift in Sources */,
+				1EA6D3462C1E3E73007E8AE0 /* NotificationsView.swift in Sources */,
+				1EA6D34A2C1E3EA0007E8AE0 /* NotificationsViewModel.swift in Sources */,
 				1EDEF6872BE1ABDF00863C10 /* ProgressLineView.swift in Sources */,
 				1ECC95352BDD77FF002BFE54 /* AppState.swift in Sources */,
 				1ECC94702BDC5B68002BFE54 /* Int+Extensions.swift in Sources */,
+				1EA6D3412C1E114F007E8AE0 /* OrderItemView.swift in Sources */,
 				1ECC950D2BDD1642002BFE54 /* CPData.swift in Sources */,
 				1ECC94542BDC57D3002BFE54 /* APIEndpoint.swift in Sources */,
 				1E5F318D2BE23E5100E5A914 /* FriendWishesDetailsView.swift in Sources */,
@@ -1012,26 +1130,27 @@
 		};
 		1EEC2BDB2BD83E6300975953 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D547D83EF7234739A1E2E211 /* Pods-WishyDriver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Wishy/Wishy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = WishyDriver/WishyDriver.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"Wishy/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WishyDriver/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CKZBH9QCG3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Wishy/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Wishy;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) will use camera to upload user photo";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(PRODUCT_NAME) will use location to track user location";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "$(PRODUCT_NAME) will use location to track user location";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) will use location to track user location";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) will use photo library to upload user photo";
+				INFOPLIST_FILE = WishyDriver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Wishy Driver";
+				INFOPLIST_KEY_NSCameraUsageDescription = "WishyDriver will use camera to upload user photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WishyDriver will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WishyDriver will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WishyDriver will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "WishyDriver will use photo library to upload user photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1043,39 +1162,44 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Fazaa.Wishy;
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Fazaa.WishyDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Wishy_Dist;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Wishy_Driver_Dist;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1EEC2BDC2BD83E6300975953 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66E29656BD4F235872BDB0E7 /* Pods-WishyDriver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Wishy/Wishy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = WishyDriver/WishyDriver.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"Wishy/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WishyDriver/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CKZBH9QCG3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Wishy/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Wishy;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) will use camera to upload user photo";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(PRODUCT_NAME) will use location to track user location";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "$(PRODUCT_NAME) will use location to track user location";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(PRODUCT_NAME) will use location to track user location";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) will use photo library to upload user photo";
+				INFOPLIST_FILE = WishyDriver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Wishy Driver";
+				INFOPLIST_KEY_NSCameraUsageDescription = "WishyDriver will use camera to upload user photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WishyDriver will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "WishyDriver will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WishyDriver will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "WishyDriver will use photo library to upload user photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1087,21 +1211,25 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Fazaa.Wishy;
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Fazaa.WishyDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Wishy_Dist;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Wishy_Driver_Dist;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1EEC2BC72BD83E6000975953 /* Build configuration list for PBXProject "Wishy" */ = {
+		1EEC2BC72BD83E6000975953 /* Build configuration list for PBXProject "WishyDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EEC2BD82BD83E6300975953 /* Debug */,
@@ -1110,7 +1238,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EEC2BDA2BD83E6300975953 /* Build configuration list for PBXNativeTarget "Wishy" */ = {
+		1EEC2BDA2BD83E6300975953 /* Build configuration list for PBXNativeTarget "WishyDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EEC2BDB2BD83E6300975953 /* Debug */,
@@ -1122,7 +1250,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */ = {
+		1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -1130,7 +1258,7 @@
 				minimumVersion = 10.24.0;
 			};
 		};
-		1ECC94B82BDC5E17002BFE54 /* XCRemoteSwiftPackageReference "PopupView.git" */ = {
+		1ECC94B82BDC5E17002BFE54 /* XCRemoteSwiftPackageReference "PopupView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/PopupView.git";
 			requirement = {
@@ -1138,7 +1266,7 @@
 				minimumVersion = 2.9.1;
 			};
 		};
-		1ECC95282BDD2B02002BFE54 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		1ECC95282BDD2B02002BFE54 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1151,147 +1279,147 @@
 /* Begin XCSwiftPackageProductDependency section */
 		1ECC94822BDC5D8B002BFE54 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
 		1ECC94842BDC5D8B002BFE54 /* FirebaseAnalyticsOnDeviceConversion */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsOnDeviceConversion;
 		};
 		1ECC94862BDC5D8B002BFE54 /* FirebaseAnalyticsSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
 		};
 		1ECC94882BDC5D8B002BFE54 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsWithoutAdIdSupport;
 		};
 		1ECC948A2BDC5D8B002BFE54 /* FirebaseAppCheck */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAppCheck;
 		};
 		1ECC948C2BDC5D8B002BFE54 /* FirebaseAppDistribution-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseAppDistribution-Beta";
 		};
 		1ECC948E2BDC5D8B002BFE54 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
 		1ECC94902BDC5D8B002BFE54 /* FirebaseAuthCombine-Community */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseAuthCombine-Community";
 		};
 		1ECC94922BDC5D8B002BFE54 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
 		1ECC94942BDC5D8B002BFE54 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
 		1ECC94962BDC5D8B002BFE54 /* FirebaseDatabaseSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabaseSwift;
 		};
 		1ECC94982BDC5D8B002BFE54 /* FirebaseDynamicLinks */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDynamicLinks;
 		};
 		1ECC949A2BDC5D8B002BFE54 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 		1ECC949C2BDC5D8B002BFE54 /* FirebaseFirestoreCombine-Community */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreCombine-Community";
 		};
 		1ECC949E2BDC5D8B002BFE54 /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
 		1ECC94A02BDC5D8B002BFE54 /* FirebaseFunctions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFunctions;
 		};
 		1ECC94A22BDC5D8B002BFE54 /* FirebaseFunctionsCombine-Community */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFunctionsCombine-Community";
 		};
 		1ECC94A42BDC5D8B002BFE54 /* FirebaseInAppMessaging-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseInAppMessaging-Beta";
 		};
 		1ECC94A62BDC5D8B002BFE54 /* FirebaseInAppMessagingSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseInAppMessagingSwift-Beta";
 		};
 		1ECC94A82BDC5D8B002BFE54 /* FirebaseInstallations */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseInstallations;
 		};
 		1ECC94AA2BDC5D8B002BFE54 /* FirebaseMLModelDownloader */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMLModelDownloader;
 		};
 		1ECC94AC2BDC5D8B002BFE54 /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
 		};
 		1ECC94AE2BDC5D8B002BFE54 /* FirebasePerformance */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebasePerformance;
 		};
 		1ECC94B02BDC5D8B002BFE54 /* FirebaseRemoteConfig */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
 		};
 		1ECC94B22BDC5D8B002BFE54 /* FirebaseRemoteConfigSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfigSwift;
 		};
 		1ECC94B42BDC5D8B002BFE54 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 		1ECC94B62BDC5D8B002BFE54 /* FirebaseStorageCombine-Community */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 1ECC94812BDC5D8B002BFE54 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
 		};
 		1ECC94B92BDC5E17002BFE54 /* PopupView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC94B82BDC5E17002BFE54 /* XCRemoteSwiftPackageReference "PopupView.git" */;
+			package = 1ECC94B82BDC5E17002BFE54 /* XCRemoteSwiftPackageReference "PopupView" */;
 			productName = PopupView;
 		};
 		1ECC95292BDD2B02002BFE54 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1ECC95282BDD2B02002BFE54 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 1ECC95282BDD2B02002BFE54 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

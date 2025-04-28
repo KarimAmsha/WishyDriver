@@ -13,7 +13,7 @@ struct WelcomeView: View {
     @EnvironmentObject var languageManager: LanguageManager
     @EnvironmentObject var settings: UserSettings
     @StateObject private var viewModel = InitialViewModel(errorHandling: ErrorHandling())
-    @State var loginStatus: LoginStatus = .welcome
+    @State var loginStatus: LoginStatus = .login
     @ObservedObject var appRouter = AppRouter()
     @StateObject private var authViewModel = AuthViewModel(errorHandling: ErrorHandling())
 

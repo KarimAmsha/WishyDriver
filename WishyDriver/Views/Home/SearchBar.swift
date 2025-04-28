@@ -12,7 +12,7 @@ struct SearchBar: View {
 
     var body: some View {
         HStack {
-            TextField(LocalizedStringKey.searchForProduct, text: $text)
+            TextField("البحث عن رقم الطلب", text: $text)
                 .customFont(weight: .regular, size: 14)
                 .padding(8)
                 .background(.white)

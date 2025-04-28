@@ -241,9 +241,9 @@ struct PersonalInfoView: View {
 extension PersonalInfoView {
     private func getUserData() {
         viewModel.fetchUserData {
-            name = viewModel.user?.full_name ?? ""
+            name = viewModel.user?.fullName ?? ""
             email = viewModel.user?.email ?? ""
-            dateStr = viewModel.user?.formattedDOB ?? ""
+//            dateStr = viewModel.user?.formattedDOB ?? ""
         }
     }
     
@@ -281,7 +281,14 @@ extension PersonalInfoView {
                 .cornerRadius(8)
         } else {
             let imageURL = viewModel.user?.image?.toURL()
-            AsyncImageView(width: 115, height: 115, cornerRadius: 8, imageURL: imageURL, customPlaceholder: "ic_user")
+            AsyncImageView(
+                width: 115,
+                height: 115,
+                cornerRadius: 8,
+                imageURL: imageURL,
+                placeholder: Image(systemName: "photo.circle"),
+                contentMode: .fill
+                )
         }
     }
 }

@@ -12,7 +12,7 @@ struct WelcomeSlideView: View {
 
     var body: some View {
         VStack {            
-            AsyncImageView(width: UIScreen.main.bounds.width, height: 320, cornerRadius: 10, imageURL: item.icon?.toURL(), systemPlaceholder: "photo")
+//            AsyncImageView(width: UIScreen.main.bounds.width, height: 320, cornerRadius: 10, imageURL: item.icon?.toURL(), systemPlaceholder: "photo")
 
             VStack(alignment: .center, spacing: 16) {
                 Text(item.Title ?? "")

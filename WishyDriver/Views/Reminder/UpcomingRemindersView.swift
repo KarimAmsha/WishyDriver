@@ -31,7 +31,7 @@ struct UpcomingRemindersView: View {
                     }
                     .foregroundColor(.primaryBlack())
                     .onTapGesture {
-                        appRouter.navigate(to: .orderDetails)
+                        appRouter.navigate(to: .orderDetails(""))
                     }
                 }
             }

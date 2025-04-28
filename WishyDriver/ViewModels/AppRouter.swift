@@ -19,7 +19,7 @@ final class AppRouter: ObservableObject {
         case paymentSuccess
         case constant(ConstantItem)
         case myOrders
-        case orderDetails
+        case orderDetails(String)
         case upcomingReminders
         case otherWishListView
         case productDetails
@@ -29,6 +29,7 @@ final class AppRouter: ObservableObject {
         case friendWishesDetailsView
         case retailFriendWishesView
         case retailPaymentView
+        case notifications
     }
     
     public enum Popup: Hashable {

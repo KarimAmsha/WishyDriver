@@ -76,12 +76,13 @@ struct CustomSingleAPIResponse<T: Codable>: Codable {
 //    let pagenation: Pagination?
 //}
 //
-//struct AppConstantsApiResponse: Codable {
-//    let status_code: Int?
-//    let status: Bool?
-//    let message: String?
-//    let items: AppConstants?
-//}
+struct CustomApiResponse: Codable {
+    let status_code: Int?
+    let status: Bool?
+    let messageAr: String?
+    let messageEn: String?
+    let items: String?
+}
 //
 //struct WalletResponse: Codable {
 //    var items: [WalletData]?

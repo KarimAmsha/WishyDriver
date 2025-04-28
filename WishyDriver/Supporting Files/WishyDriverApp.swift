@@ -1,6 +1,6 @@
 //
-//  WishyApp.swift
-//  Wishy
+//  WishyDriverApp.swift
+//  WishyDriver
 //
 //  Created by Karim Amsha on 23.04.2024.
 //

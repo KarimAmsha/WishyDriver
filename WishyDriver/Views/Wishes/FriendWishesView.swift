@@ -16,7 +16,7 @@ struct FriendWishesView: View {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 20) {
                     VStack(alignment: .center, spacing: 8) {
-                        AsyncImageView(width: 57, height: 57, cornerRadius: 8, imageURL: UserSettings.shared.user?.image?.toURL(), systemPlaceholder: "photo")
+//                        AsyncImageView(width: 57, height: 57, cornerRadius: 8, imageURL: UserSettings.shared.user?.image?.toURL(), systemPlaceholder: "photo")
                         
                         Text("Ahmed M. Y. Al-Azaiza")
                             .customFont(weight: .bold, size: 14)
@@ -52,9 +52,9 @@ struct FriendWishesView: View {
                                     VStack(spacing: 8) {
                                         LazyHGrid(rows: [GridItem(.flexible(), spacing: 8), GridItem(.flexible(), spacing: 8)], spacing: 8) {
                                             ForEach(0..<4, id: \.self) { _ in
-                                                AsyncImageView(width: 65, height: 65, cornerRadius: 10, imageURL: URL(string: "https://example.com/image\(index).jpg"), systemPlaceholder: "photo")
-                                                    .cornerRadius(4)
-                                                    .padding(6)
+//                                                AsyncImageView(width: 65, height: 65, cornerRadius: 10, imageURL: URL(string: "https://example.com/image\(index).jpg"), systemPlaceholder: "photo")
+//                                                    .cornerRadius(4)
+//                                                    .padding(6)
                                             }
                                         }
                                         
@@ -87,7 +87,7 @@ struct FriendWishesView: View {
                             ForEach(items, id: \.self) { index in
                                 VStack(alignment: .leading, spacing: 8) {
                                     HStack {
-                                        AsyncImageView(width: 70, height: 70, cornerRadius: 5, imageURL: URL(string: ""), systemPlaceholder: "photo")
+//                                        AsyncImageView(width: 70, height: 70, cornerRadius: 5, imageURL: URL(string: ""), systemPlaceholder: "photo")
                                         
                                         VStack(alignment: .leading) {
                                             HStack {

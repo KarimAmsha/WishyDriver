@@ -25,13 +25,13 @@ class DataProvider {
 //        case updateUserDataWithImage(params: [String: Any], imageFiles: [(Data, String)]?, token: String)
         case updateUserData(params: [String: Any], token: String)
         case getUserProfile(token: String)
-        case logout(userID: String, token: String)
+        case logout(userID: String)
         case addOrder(params: [String: Any], token: String)
         case addOfferToOrder(orderId: String, params: [String: Any], token: String)
         case updateOfferStatus(orderId: String, params: [String: Any], token: String)
         case updateOrderStatus(orderId: String, params: [String: Any], token: String)
         case map(params: [String: Any], token: String)
-        case getOrders(status: String?, page: Int?, limit: Int?, token: String)
+        case getOrders(page: Int?, limit: Int?, params: [String: Any], token: String)
         case getOrderDetails(orderId: String, token: String)
         case addReview(orderID: String, params: [String: Any], token: String)
         case getNotifications(page: Int?, limit: Int?, token: String)
@@ -59,6 +59,10 @@ class DataProvider {
         case checkPlace(params: [String: Any], token: String)
         case checkPoint(params: [String: Any], token: String)
         case rechangePoint(params: [String: Any], token: String)
+        case confirmUpdateCode(id: String, params: [String: Any], token: String)
+        case updateAvailability(params: [String: Any], token: String)
+        case orderCount(token: String)
+        case refreshFcmToken(params: [String: Any], token: String)
 
         // Map your custom Endpoint to APIEndpoint
         func toAPIEndpoint() -> APIEndpoint {
@@ -83,8 +87,8 @@ class DataProvider {
                 return .updateUserData(params: params, token: token)
             case .getUserProfile(let token):
                 return .getUserProfile(token: token)
-            case .logout(let userID, let token):
-                return .logout(userID: userID, token: token)
+            case .logout(let userID):
+                return .logout(userID: userID)
             case .addOrder(let params, let token):
                 return .addOrder(params: params, token: token)
             case .map(let params, let token):
@@ -95,8 +99,8 @@ class DataProvider {
                 return .updateOfferStatus(orderId: orderId, params: params, token: token)
             case .updateOrderStatus(let orderId, let params, let token):
                 return .updateOrderStatus(orderId: orderId, params: params, token: token)
-            case .getOrders(let status, let page, let limit, let token):
-                return .getOrders(status: status, page: page, limit: limit, token: token)
+            case .getOrders(let page, let limit, let params, let token):
+                return .getOrders(page: page, limit: limit, params: params, token: token)
             case .getOrderDetails(let orderId, let token):
                 return .getOrderDetails(orderId: orderId, token: token)
             case .addReview(let orderID, let params, let token):
@@ -151,6 +155,14 @@ class DataProvider {
                 return .checkPoint(params: params, token: token)
             case .rechangePoint(let params, let token):
                 return .rechangePoint(params: params, token: token)
+            case .confirmUpdateCode(let id, let params, let token):
+                return .confirmUpdateCode(id: id, params: params, token: token)
+            case .updateAvailability(let params, let token):
+                return .updateAvailability(params: params, token: token)
+            case .orderCount(let token):
+                return .orderCount(token: token)
+            case .refreshFcmToken(let params, let token):
+                return .refreshFcmToken(params: params, token: token)
             }
         }
     }

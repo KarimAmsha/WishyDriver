@@ -37,9 +37,12 @@ class AuthViewModel: ObservableObject {
                     break
                 case .failure(let error):
                     // Use the centralized error handling component
+                    print("errorerror \(error.localizedDescription)")
+                    print("44 \(error)")
                     self.handleAPIError(error)
                 }
             }, receiveValue: { [weak self] (response: SingleAPIResponse<User>) in
+                print("fffff \(response)")
                 if response.status {
                     self?.user = response.items
                     self?.handleVerificationStatus(isVerified: response.items?.isVerify ?? false)
@@ -76,7 +79,7 @@ class AuthViewModel: ObservableObject {
                 if response.status {
                     self?.user = response.items
                     self?.errorMessage = nil
-                    let profileCompleted = !(self?.user?.full_name?.isEmpty ?? false)
+                    let profileCompleted = !(self?.user?.fullName?.isEmpty ?? false)
                     if profileCompleted {
                         self?.handleVerificationStatus(isVerified: response.items?.isVerify ?? false)
                     } else {
@@ -122,14 +125,14 @@ class AuthViewModel: ObservableObject {
     }
 
     func logoutUser(onsuccess: @escaping () -> Void) {
-        guard let token = userSettings.token else {
-            self.handleAPIError(.customError(message: LocalizedStringKey.tokenError))
-            return
-        }
+//        guard let token = userSettings.token else {
+//            self.handleAPIError(.customError(message: LocalizedStringKey.tokenError))
+//            return
+//        }
 
         isLoading = true
         errorMessage = nil
-        let endpoint = DataProvider.Endpoint.logout(userID: userSettings.id ?? "", token: token)
+        let endpoint = DataProvider.Endpoint.logout(userID: userSettings.id ?? "")
         
         DataProvider.shared.request(endpoint: endpoint, responseType: SingleAPIResponse<User>.self)
             .sink(receiveCompletion: { completion in
@@ -137,10 +140,12 @@ class AuthViewModel: ObservableObject {
                 case .finished:
                     break
                 case .failure(let error):
+                    print("ssss \(error)")
                     // Use the centralized error handling component
                     self.handleAPIError(error)
                 }
             }, receiveValue: { [weak self] (response: SingleAPIResponse<User>) in
+                print("1111 \(response)")
                 if response.status {
                     self?.user = response.items
                     self?.userSettings.logout()
@@ -194,7 +199,7 @@ class AuthViewModel: ObservableObject {
         errorMessage = nil
         let endpoint = DataProvider.Endpoint.guest
         
-        DataProvider.shared.request(endpoint: endpoint, responseType: SingleAPIResponse<String>.self)
+        DataProvider.shared.request(endpoint: endpoint, responseType: CustomApiResponse.self)
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .finished:
@@ -203,14 +208,14 @@ class AuthViewModel: ObservableObject {
                     // Use the centralized error handling component
                     self.handleAPIError(error)
                 }
-            }, receiveValue: { [weak self] (response: SingleAPIResponse<String>) in
-                if response.status {
+            }, receiveValue: { [weak self] (response: CustomApiResponse) in
+                if let status = response.status, status {
                     self?.errorMessage = nil
                     UserSettings.shared.guestLogin(token: response.items ?? "")
                     onsuccess()
                 } else {
                     // Use the centralized error handling component
-                    self?.handleAPIError(.customError(message: response.message))
+                    self?.handleAPIError(.customError(message: response.messageAr ?? ""))
                 }
                 self?.isLoading = false
             })

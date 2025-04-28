@@ -14,7 +14,7 @@ struct ProductDetailsView: View {
         VStack {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 8) {
-                    AsyncImageView(width: UIScreen.main.bounds.size.width, height: 250, cornerRadius: 10, imageURL: URL(string: "https://media.zid.store/cdn-cgi/image/f=auto/https://media.zid.store/ca6f01a7-f802-4c28-b793-b6c642a7f178/42610e71-37fa-471e-aa72-b5e11fb658a7.jpg"), systemPlaceholder: "photo")
+//                    AsyncImageView(width: UIScreen.main.bounds.size.width, height: 250, cornerRadius: 10, imageURL: URL(string: "https://media.zid.store/cdn-cgi/image/f=auto/https://media.zid.store/ca6f01a7-f802-4c28-b793-b6c642a7f178/42610e71-37fa-471e-aa72-b5e11fb658a7.jpg"), systemPlaceholder: "photo")
 
                     VStack(alignment: .leading, spacing: 12) {
                         Text("سلة ورد")

@@ -11,49 +11,27 @@ struct ProfileView: View {
     @EnvironmentObject var appRouter: AppRouter
     @StateObject private var initialViewModel = InitialViewModel(errorHandling: ErrorHandling())
     @StateObject private var authViewModel = AuthViewModel(errorHandling: ErrorHandling())
+    @StateObject private var userViewModel = UserViewModel(errorHandling: ErrorHandling())
     @EnvironmentObject var appState: AppState
+    @State private var isToggleOn = false
 
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20) {
                     VStack(alignment: .center, spacing: 8) {
-                        AsyncImageView(width: 57, height: 57, cornerRadius: 8, imageURL: UserSettings.shared.user?.image?.toURL(), systemPlaceholder: "photo")
-                        
-                        Text(UserSettings.shared.user?.full_name ?? "")
+                        AsyncImageView(
+                            width: 57,
+                            height: 57,
+                            cornerRadius: 8,
+                            imageURL: UserSettings.shared.user?.image?.toURL(),
+                            placeholder: Image(systemName: "photo"),
+                            contentMode: .fill
+                        )
+
+                        Text(UserSettings.shared.user?.fullName ?? "")
                             .customFont(weight: .bold, size: 14)
                             .foregroundColor(.white)
-                        
-                        HStack {
-                            Text("2 قوائم علنية")
-                            Image(systemName: "circle.fill")
-                                .resizable().frame(width: 4, height: 4)
-                            Text("2 قوائم خاصة")
-                            Image(systemName: "circle.fill")
-                                .resizable().frame(width: 4, height: 4)
-                            Text("1 أمنية بنظام القَطَّة")
-
-                        }
-                        .customFont(weight: .regular, size: 12)
-                        .foregroundColor(.white)
-                        
-                        HStack {
-                            Button {
-                                appRouter.navigate(to: .editProfile)
-                            } label: {
-                                Text(LocalizedStringKey.editMyProfile)
-                            }
-                            .buttonStyle(PrimaryButton(fontSize: 12, fontWeight: .semiBold, background: .primaryLight(), foreground: .primaryBlack(), height: 34, radius: 4))
-
-                            Button {
-                                //
-                            } label: {
-                                Image("ic_enter")
-                                    .padding(8)
-                                    .background(Color.primaryNormal().cornerRadius(4))
-                            }
-
-                        }
                     }
                     .frame(maxWidth: .infinity)
                     .padding(24)
@@ -62,38 +40,43 @@ struct ProfileView: View {
                     .roundedBackground(cornerRadius: 4, strokeColor: .grayEBF0FF(), lineWidth: 1)
 
                     VStack(spacing: 16) {
-                        CustomListItem(title: LocalizedStringKey.eventReminders,
-                                       subtitle: LocalizedStringKey.eventReminders,
-                                       icon: Image("ic_calendar"),
-                                       action: {
-                            appRouter.navigate(to: .upcomingReminders)
-                        }) {
+                        VStack(spacing: 0) {
+                            HStack {
+                                Image("ic_lock")
+
+                                HStack {
+                                    Text(LocalizedStringKey.isAvailabilityEnabled)
+                                        .customFont(weight: .medium, size: 14)
+                                        .foregroundColor(.primaryBlack())
+                                    Spacer()
+                                    Toggle("", isOn: $isToggleOn)
+                                        .padding()
+                                        .toggleStyle(CustomToggleStyle())
+                                        .onChange(of: isToggleOn) { newValue in
+                                            // Update the user's availability in settings and trigger a network request
+                                            updateAvailability(newValue)
+                                        }
+                                }
+                                
+                                Spacer()
+                            }
+                            CustomDivider(color: .grayF2F2F2())
                         }
-                        
-                        CustomListItem(title: LocalizedStringKey.myOrders,
-                                       subtitle: LocalizedStringKey.myOrders,
-                                       icon: Image("ic_orders"),
-                                       action: {
-                            appRouter.navigate(to: .myOrders)
-                        }) {
-                        }
+                        .padding(.leading, 14)
 
                         CustomListItem(title: LocalizedStringKey.notifications,
                                        subtitle: LocalizedStringKey.notifications,
                                        icon: Image("ic_b_bell"),
                                        action: {
-                            appRouter.navigate(to: .editProfile)
+                            appRouter.navigate(to: .notifications)
                         }) {
                         }
-
+                        
                         CustomListItem(title: LocalizedStringKey.aboutApp,
                                        subtitle: LocalizedStringKey.aboutApp,
                                        icon: Image("ic_mobile"),
                                        action: {
                             if let item = initialViewModel.constantsItems?.filter({ $0.constantType == .about }).first {
-                                appRouter.navigate(to: .constant(item))
-                            } else {
-                                let item = ConstantItem(_id: "", Type: "about", Title: LocalizedStringKey.aboutApp, Content: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.")
                                 appRouter.navigate(to: .constant(item))
                             }
                         }) {
@@ -104,9 +87,6 @@ struct ProfileView: View {
                                        icon: Image("ic_lock"),
                                        action: {
                             if let item = initialViewModel.constantsItems?.filter({ $0.constantType == .using }).first {
-                                appRouter.navigate(to: .constant(item))
-                            } else {
-                                let item = ConstantItem(_id: "", Type: "using", Title: LocalizedStringKey.usePolicy, Content: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.")
                                 appRouter.navigate(to: .constant(item))
                             }
                         }) {
@@ -119,8 +99,9 @@ struct ProfileView: View {
                             if let item = initialViewModel.constantsItems?.filter({ $0.constantType == .privacy }).first {
                                 appRouter.navigate(to: .constant(item))
                             } else {
-                                let item = ConstantItem(_id: "", Type: "privacy", Title: LocalizedStringKey.privacyPolicy, Content: "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.")
-                                appRouter.navigate(to: .constant(item))
+                                if let item = initialViewModel.constantsItems?.filter({ $0.constantType == .privacy }).first {
+                                    appRouter.navigate(to: .constant(item))
+                                }
                             }
                         }) {
                         }
@@ -146,17 +127,24 @@ struct ProfileView: View {
             }
         }
         .navigationBarBackButtonHidden()
-        .background(Color.background())
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Text(LocalizedStringKey.profile)
-                    .customFont(weight: .bold, size: 20)
-                    .foregroundColor(Color.primaryBlack())
-            }
-            
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Image("ic_bell")
-            }
+//        .background(Color.background())
+//        .toolbar {
+//            ToolbarItem(placement: .navigationBarLeading) {
+//                Text(LocalizedStringKey.profile)
+//                    .customFont(weight: .bold, size: 18)
+//                    .foregroundColor(.primaryBlack())
+//            }
+//            
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                Button {
+//                    appRouter.navigate(to: .notifications)
+//                } label: {
+//                    Image("ic_bell")
+//                }
+//            }
+//        }
+        .onAppear {
+            getConstants()
         }
     }
 }
@@ -166,6 +154,10 @@ struct ProfileView: View {
 }
 
 extension ProfileView {
+    private func getConstants() {
+        initialViewModel.fetchConstantsItems()
+    }
+
     private func logout() {
         let alertModel = AlertModel(icon: "",
                                     title: LocalizedStringKey.logout,
@@ -209,3 +201,14 @@ extension ProfileView {
     }
 }
 
+extension ProfileView {
+    private func updateAvailability(_ value: Bool) {
+        let params: [String: Any] = [
+            "isAvailable": value
+        ]
+        
+        userViewModel.updateAvailability(params: params) { message in
+            //
+        }
+    }
+}

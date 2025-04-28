@@ -14,11 +14,11 @@ struct RetailFriendWishesView: View {
         VStack {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 8) {
-                    AsyncImageView(width: UIScreen.main.bounds.size.width, height: 250, cornerRadius: 10, imageURL: URL(string: "https://cdn.salla.sa/YaWlZ/Vt48yYEdfs50TZzKSjZC48F2cXqdNQTqmKUDzEaw.jpg"), systemPlaceholder: "photo")
+//                    AsyncImageView(width: UIScreen.main.bounds.size.width, height: 250, cornerRadius: 10, imageURL: URL(string: "https://cdn.salla.sa/YaWlZ/Vt48yYEdfs50TZzKSjZC48F2cXqdNQTqmKUDzEaw.jpg"), systemPlaceholder: "photo")
 
                     VStack(alignment: .leading, spacing: 12) {
                         HStack {
-                            AsyncImageView(width: 70, height: 70, cornerRadius: 5, imageURL: URL(string: ""), systemPlaceholder: "photo")
+//                            AsyncImageView(width: 70, height: 70, cornerRadius: 5, imageURL: URL(string: ""), systemPlaceholder: "photo")
                             
                             VStack(alignment: .leading) {
                                 HStack {

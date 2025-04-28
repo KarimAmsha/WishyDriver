@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var isActive: Bool = false
     @EnvironmentObject var settings: UserSettings
-    @ObservedObject var monitor = Monitor()
+//    @ObservedObject var monitor = Monitor()
     @ObservedObject var appRouter = AppRouter()
 
     var body: some View {
@@ -34,11 +34,11 @@ struct ContentView: View {
                 SplashView()
             }
         }
-        .onChange(of: monitor.status) { status in
-            if status == .disconnected {
-                appRouter.togglePopupError(.alertError(LocalizedStringKey.error, LocalizedError.noInternetConnection))
-            }
-        }
+//        .onChange(of: monitor.status) { status in
+//            if status == .disconnected {
+//                appRouter.togglePopupError(.alertError(LocalizedStringKey.error, LocalizedError.noInternetConnection))
+//            }
+//        }
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 withAnimation {

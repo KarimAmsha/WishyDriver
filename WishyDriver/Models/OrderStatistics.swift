@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct OrderStatistics: Codable {
+    let accpeted: Int?
+    let progress: Int?
+    let finished: Int?
+    let cancelded: Int?
+}

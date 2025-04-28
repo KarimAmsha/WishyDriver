@@ -1,0 +1,6 @@
+framework module Pods_WishyDriver {
+  umbrella header "Pods-WishyDriver-umbrella.h"
+
+  export *
+  module * { export * }
+}

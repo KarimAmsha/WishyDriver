@@ -34,16 +34,7 @@ struct CustomListItem<Content: View>: View {
                             .foregroundColor(.primaryBlack())
                         Text(title)
                         Spacer()
-                        if title == LocalizedStringKey.notifications {
-                            Toggle("", isOn: $isToggled)
-                                .padding()
-                                .toggleStyle(CustomToggleStyle())
-                                .onChange(of: isToggled) { newValue in
-//                                    updateAvailability(newValue)
-                                }
-                        } else {
-                            Image(systemName: "chevron.left")
-                        }
+                        Image(systemName: "chevron.left")
                     }
                     .customFont(weight: .medium, size: 14)
                     .foregroundColor(textColor ?? .primaryBlack())

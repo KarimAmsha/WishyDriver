@@ -29,38 +29,34 @@ struct MainView: View {
                         switch appState.currentPage {
                         case .home:
                             HomeView()
-                        case .wishes:
-                            WishesView()
-                        case .categories:
-                            CategoriesView()
-                        case .cart:
-                            CartView()
+                        case .orders:
+                            if settings.id == nil {
+                                CustomeEmptyView()
+                            } else {
+                                OrdersView()
+                            }
                         case .profile:
-                            ProfileView()
+                            if settings.id == nil {
+                                CustomeEmptyView()
+                            } else {
+                                ProfileView()
+                            }
                         }
-                        
+
                         ZStack {
                             VStack(spacing: 0) {
                                 CustomDivider()
                                 
-                                HStack(spacing: 4) {
-                                    TabBarIcon(appState: appState, assignedPage: .home, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_home", tabName: LocalizedStringKey.home, isAddButton: false)
+                                HStack {
+                                    TabBarIcon(appState: appState, assignedPage: .home, width: geometry.size.width/5, height: geometry.size.height/38, iconName: "ic_home", tabName: LocalizedStringKey.home, isAddButton: false)
+
+                                    Spacer()
                                     
-                                    Spacer()
-
-                                    TabBarIcon(appState: appState, assignedPage: .wishes, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_wishes", tabName: LocalizedStringKey.wishes, isAddButton: false)
+                                    TabBarIcon(appState: appState, assignedPage: .orders, width: geometry.size.width/5, height: geometry.size.height/38, iconName: "ic_category", tabName: LocalizedStringKey.orders, isAddButton: false)
 
                                     Spacer()
 
-                                    TabBarIcon(appState: appState, assignedPage: .categories, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_category", tabName: LocalizedStringKey.categories, isAddButton: false)
-
-                                    Spacer()
-
-                                    TabBarIcon(appState: appState, assignedPage: .cart, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_cart", tabName: LocalizedStringKey.cart, isAddButton: false)
-                                    
-                                    Spacer()
-
-                                    TabBarIcon(appState: appState, assignedPage: .profile, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_profile", tabName: LocalizedStringKey.profile, isAddButton: false)
+                                    TabBarIcon(appState: appState, assignedPage: .profile, width: geometry.size.width/5, height: geometry.size.height/38, iconName: "ic_profile", tabName: LocalizedStringKey.profile, isAddButton: false)
                                 }
                                 .padding(.horizontal)
                                 .frame(width: geometry.size.width, height: geometry.size.height/10)
@@ -98,9 +94,9 @@ struct MainView: View {
                 case .constant(let item):
                     ConstantView(item: .constant(item))
                 case .myOrders:
-                    MyOrdersView()
-                case .orderDetails:
-                    OrderDetailsView()
+                    OrdersView()
+                case .orderDetails(let id):
+                    OrderDetailsView(orderID: id)
                 case .upcomingReminders:
                     UpcomingRemindersView()
                 case .otherWishListView:
@@ -119,6 +115,8 @@ struct MainView: View {
                     RetailFriendWishesView()
                 case .retailPaymentView:
                     RetailPaymentView()
+                case .notifications:
+                    NotificationsView()
                 }
             }
             .popup(isPresented: Binding<Bool>(

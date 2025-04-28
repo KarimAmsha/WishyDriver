@@ -14,7 +14,7 @@ struct CustomToggleStyle: ToggleStyle {
             Spacer()
             Toggle("", isOn: configuration.$isOn)
                 .labelsHidden()
-                .toggleStyle(SwitchToggleStyle(tint: .primaryLight())) 
+                .toggleStyle(SwitchToggleStyle(tint: .primary1())) 
         }
     }
 }

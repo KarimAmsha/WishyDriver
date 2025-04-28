@@ -5,76 +5,41 @@ struct AsyncImageView: View {
     var height: CGFloat
     var cornerRadius: CGFloat
     var imageURL: URL?
-    var systemPlaceholder: String?
-    var customPlaceholder: String?
+    var placeholder: Image?
+    var contentMode: ContentMode = .fit
 
     var body: some View {
-        Group {
-            if let imageURL = imageURL {
-                AsyncImage(url: imageURL) { phase in
-                    switch phase {
-                    case .empty:
-                        placeholderView()
-                    case .success(let image):
-                        loadedImage(image)
-                    case .failure:
-                        failureView()
-                    @unknown default:
-                        placeholderView()
-                    }
+        if let imageURL = imageURL {
+            AsyncImage(url: imageURL, scale: 1.0, content: { phase in
+                switch phase {
+                case .empty:
+                    placeholder?
+                        .resizable()
+                        .aspectRatio(contentMode: contentMode)
+                        .foregroundColor(.grayCCCCCC())
+                case .success(let image):
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: contentMode)
+                case .failure(let error):
+                    placeholder?
+                        .resizable()
+                        .aspectRatio(contentMode: contentMode)
+                        .foregroundColor(.grayCCCCCC())
+                @unknown default:
+                    ProgressView()
                 }
-                .aspectRatio(contentMode: .fit)
-                .frame(width: width, height: height)
-                .cornerRadius(cornerRadius)
-            } else {
-                placeholderView()
-                    .frame(width: width, height: height)
-                    .cornerRadius(cornerRadius)
-            }
-        }
-    }
-
-    private func placeholderView() -> some View {
-        let placeholder: AnyView
-        
-        if let customPlaceholder = customPlaceholder {
-            placeholder = AnyView(
-                Image(customPlaceholder)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.gray)
-                    .frame(width: width, height: height)
-                    .cornerRadius(cornerRadius)
-            )
-        } else if let systemPlaceholder = systemPlaceholder {
-            placeholder = AnyView(
-                Image(systemName: systemPlaceholder)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.gray)
-                    .frame(width: width, height: height)
-                    .cornerRadius(cornerRadius)
-            )
-        } else {
-            placeholder = AnyView(
-                ProgressView()
-                    .frame(width: width, height: height)
-                    .cornerRadius(cornerRadius)
-            )
-        }
-        
-        return placeholder
-    }
-
-    private func loadedImage(_ image: Image) -> some View {
-        image
-            .resizable()
-            .aspectRatio(contentMode: .fit)
+            })
+            .aspectRatio(contentMode: contentMode)
             .frame(width: width, height: height)
             .cornerRadius(cornerRadius)
-    }
-
-    private func failureView() -> some View {
-        placeholderView()
+        } else {
+            placeholder?
+                .resizable()
+                .aspectRatio(contentMode: contentMode)
+                .frame(width: width, height: height)
+                .cornerRadius(cornerRadius)
+        }
     }
 }
+

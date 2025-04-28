@@ -87,9 +87,7 @@ enum MediaType {
 
 enum Page {
     case home
-    case wishes
-    case categories
-    case cart
+    case orders
     case profile
 }
 
@@ -163,7 +161,7 @@ enum OrderStatus: String, Codable, CaseIterable {
     case prefinished = "prefinished"
     case finished = "finished"
     case rated = "rated"
-    case canceled = "canceled_by_user"
+    case canceled = "canceled_by_driver"
 
     init(_ type: String) {
         switch type {
@@ -218,10 +216,10 @@ enum OrderStatus: String, Codable, CaseIterable {
         case .accepted: return "تعيين فني"
         case .started: return "في الطريق"
         case .way: return "في الطريق"
-        case .progress: return "قيد التنفيذ"
-        case .finished: return "تم التنفيذ بنجاح!"
-        case .prefinished: return "تم التنفيذ بنجاح!"
-        case .rated: return "تم التنفيذ بنجاح!"
+        case .progress: return "قيد التسليم"
+        case .finished: return "تم التوصيل بنجاح!"
+        case .prefinished: return "تم التوصيل بنجاح!"
+        case .rated: return "تم التوصيل بنجاح!"
         case .updated: return "تم التعديل"
         case .canceled: return "تم الالغاء"
         }
@@ -353,17 +351,21 @@ enum TransactionType: String, Codable {
 }
 
 enum NotificationType: String, Codable {
-    case join = "1"
-    case deliver = "2"
-    case panel = "3"
+    case orders = "1"
+    case coupon = "2"
+    case general = "3"
+    case reminder = "4"
+    case friend = "5"
 
     init(_ type: String) {
         switch type {
-        case "1": self = .join
-        case "2": self = .deliver
-        case "3": self = .panel
+        case "1": self = .orders
+        case "2": self = .coupon
+        case "3": self = .general
+        case "4": self = .reminder
+        case "5": self = .friend
         default:
-            self = .panel
+            self = .general
         }
     }
 }
@@ -936,7 +938,9 @@ enum LocalizedStringKey {
     static let friendWishes = "Friend Wishes".localized
     static let publicLists = "Public Lists".localized
     static let retailSystem = "Retail System".localized
-
+    static let goToLogin = "Go To Login".localized
+    static let pleaseLogin = "Please login to see the contents".localized
+    static let isAvailabilityEnabled = "Availability Enabled".localized
 }
 
 enum LocalizedError {

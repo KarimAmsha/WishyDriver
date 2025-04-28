@@ -43,6 +43,15 @@ struct LoginView: View {
                 VStack(spacing: 20) {
                     MobileView(mobile: $mobile, presentSheet: $presentSheet)
                     
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(LocalizedStringKey.password)
+                            .customFont(weight: .regular, size: 12)
+                            .foregroundColor(.black1F1F1F())
+                        CustomSecureTextField(text: $password, placeholder: LocalizedStringKey.password, textColor: .black4E5556(), placeholderColor: .grayA4ACAD())
+                            .disabled(viewModel.isLoading)
+                            .roundedBackground(cornerRadius: 8, strokeColor: Color.primaryGreen(), lineWidth: 1)
+                    }
+
                     Spacer()
 
                     // Show a loader while registering
@@ -63,6 +72,16 @@ struct LoginView: View {
                             Text(LocalizedStringKey.login)
                         }
                         .buttonStyle(GradientPrimaryButton(fontSize: 16, fontWeight: .bold, background: Color.primaryGradientColor(), foreground: .white, height: 48, radius: 12))
+                        .disabled(viewModel.isLoading)
+                        
+                        Button {
+                            viewModel.guest {
+                                settings.loggedIn = true
+                            }
+                        } label: {
+                            Text(LocalizedStringKey.guest)
+                        }
+                        .buttonStyle(PrimaryButton(fontSize: 16, fontWeight: .bold, background: .primaryLight(), foreground: .primaryDarker(), height: 48, radius: 8))
                         .disabled(viewModel.isLoading)
                     }
                 }
@@ -121,13 +140,14 @@ struct LoginView: View {
         }
         .onAppear {
             // Use the user's current location if available
-//            if let userLocation = LocationManager.shared.userLocation {
-//                self.userLocation = userLocation
-//            }
+            if let userLocation = LocationManager.shared.userLocation {
+                self.userLocation = userLocation
+            }
             
-//            #if DEBUG
-//            mobile = "905345719207"
-//            #endif
+            #if DEBUG
+            mobile = "535353533"
+            password = "123123"
+            #endif
         }
         .onChange(of: viewModel.errorMessage) { errorMessage in
             if let errorMessage = errorMessage {
@@ -168,6 +188,7 @@ extension LoginView {
         
         var params: [String: Any] = [
             "phone_number": getCompletePhoneNumber(),
+            "password": password,
             "os": "IOS",
             "fcmToken": fcmToken,
             "lat": userLocation?.latitude ?? 0.0,
@@ -196,8 +217,63 @@ extension LoginView {
     private func continueRegistration(with params: [String: Any]) {
         viewModel.registerUser(params: params) { id, token in
             appState.userId = id
-            loginStatus = .verification
+            loginStatus = .profile(token)
         }
     }
 }
 
+struct CustomSecureTextField: View {
+    @Binding var text: String
+
+    var placeholder: String
+    var textColor: Color
+    var placeholderColor: Color
+
+    @State private var isSecure: Bool = true
+
+    var body: some View {
+        ZStack(alignment: .leading) {
+            Rectangle()
+                .foregroundColor(.clear)
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .background(Color.white)
+                .cornerRadius(8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.white, lineWidth: 1)
+                )
+
+            if text.isEmpty {
+                Text(placeholder)
+                    .customFont(weight: .regular, size: 14)
+                    .foregroundColor(placeholderColor)
+                    .padding(.horizontal, 8)
+            }
+
+            if isSecure {
+                SecureField("", text: $text)
+                    .customFont(weight: .regular, size: 14)
+                    .foregroundColor(textColor)
+                    .accentColor(Color.primary())
+                    .padding(.horizontal, 8)
+            } else {
+                TextField("", text: $text)
+                    .customFont(weight: .regular, size: 14)
+                    .foregroundColor(textColor)
+                    .accentColor(Color.primary())
+                    .padding(.horizontal, 8)
+            }
+            HStack {
+                Spacer()
+                Button(action: {
+                    isSecure.toggle()
+                }) {
+                    Image("ic_eye")
+                        .padding(.trailing, 16)
+                        .foregroundColor(isSecure ? placeholderColor : textColor)
+                }
+            }
+        }
+    }
+}

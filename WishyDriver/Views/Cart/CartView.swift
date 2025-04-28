@@ -24,7 +24,7 @@ struct CartView: View {
                 ForEach(items, id: \.self) { index in
                     VStack(alignment: .leading, spacing: 8) {
                         HStack {
-                            AsyncImageView(width: 60, height: 60, cornerRadius: 5, imageURL: "https://cdn.salla.sa/wQYpe/4kqoxHKsNU0dbsA612HutA1MheJtnVuLzYAThADg.jpg".toURL(), systemPlaceholder: "photo")
+//                            AsyncImageView(width: 60, height: 60, cornerRadius: 5, imageURL: "https://cdn.salla.sa/wQYpe/4kqoxHKsNU0dbsA612HutA1MheJtnVuLzYAThADg.jpg".toURL(), systemPlaceholder: "photo")
                             
                             VStack(alignment: .leading) {
                                 Text("سلة ورد")

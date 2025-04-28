@@ -531,6 +531,16 @@ extension Color {
     }
 
     static
+    func orangeCA5D08() -> Color {
+        return Color(hex: "CA5D08")
+    }
+
+    static
+    func orangeF6E5D0() -> Color {
+        return Color(hex: "F6E5D0")
+    }
+
+    static
     func redFF5B5B() -> Color {
         return Color(hex: "FF5B5B")
     }

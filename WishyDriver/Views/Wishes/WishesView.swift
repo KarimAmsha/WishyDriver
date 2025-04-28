@@ -43,9 +43,9 @@ struct WishesView: View {
                             VStack(spacing: 8) {
                                 LazyHGrid(rows: [GridItem(.flexible(), spacing: 8), GridItem(.flexible(), spacing: 8)], spacing: 8) {
                                     ForEach(0..<4, id: \.self) { _ in
-                                        AsyncImageView(width: 65, height: 65, cornerRadius: 10, imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjgGJsjDGg3zlyeqH2RHre62EPIy3kZrWAQBYwxCgH9A&s".toURL(), systemPlaceholder: "photo")
-                                            .cornerRadius(4)
-                                            .padding(6)
+//                                        AsyncImageView(width: 65, height: 65, cornerRadius: 10, imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjgGJsjDGg3zlyeqH2RHre62EPIy3kZrWAQBYwxCgH9A&s".toURL(), systemPlaceholder: "photo")
+//                                            .cornerRadius(4)
+//                                            .padding(6)
                                     }
                                 }
 
@@ -70,7 +70,7 @@ struct WishesView: View {
                         ForEach(items, id: \.self) { index in
                             VStack(alignment: .leading, spacing: 8) {
                                 HStack {
-                                    AsyncImageView(width: 35, height: 35, cornerRadius: 17.5, imageURL: URL(string: ""), systemPlaceholder: "photo.circle")
+//                                    AsyncImageView(width: 35, height: 35, cornerRadius: 17.5, imageURL: URL(string: ""), systemPlaceholder: "photo.circle")
                                     
                                     VStack(alignment: .leading) {
                                         Text("Ahmed Al-Azaiza")

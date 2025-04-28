@@ -17,9 +17,9 @@ struct FriendWishesListView: View {
                 LazyVGrid(columns: [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)], spacing: 16) {
                     ForEach(items, id: \.self) { index in
                         VStack(alignment: .leading, spacing: 8) {
-                            AsyncImageView(width: 150, height: 150, cornerRadius: 10, imageURL: URL(string: "https://areej.store/wp-content/uploads/2024/01/ARJ0159987-Training-enf-36-41-3500-DZ-2.jpg"), systemPlaceholder: "photo")
-                                .cornerRadius(4)
-                                .padding(.horizontal, 6)
+//                            AsyncImageView(width: 150, height: 150, cornerRadius: 10, imageURL: URL(string: "https://areej.store/wp-content/uploads/2024/01/ARJ0159987-Training-enf-36-41-3500-DZ-2.jpg"), systemPlaceholder: "photo")
+//                                .cornerRadius(4)
+//                                .padding(.horizontal, 6)
 
                             Text("حذاء Nike")
                                 .customFont(weight: .bold, size: 16)

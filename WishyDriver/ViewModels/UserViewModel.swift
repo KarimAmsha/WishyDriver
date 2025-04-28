@@ -251,6 +251,44 @@ class UserViewModel: ObservableObject {
             })
             .store(in: &cancellables)
     }
+    
+    func updateAvailability(params: [String: Any], onsuccess: @escaping (String) -> Void) {
+        guard let token = userSettings.token else {
+            self.handleAPIError(.customError(message: LocalizedStringKey.tokenError))
+            return
+        }
+        
+        isLoading = true
+        errorMessage = nil
+        let endpoint = DataProvider.Endpoint.updateAvailability(params: params, token: token)
+        
+        dataProvider.request(endpoint: endpoint, responseType: SingleAPIResponse<User>.self) { [weak self] result in
+            self?.isLoading = false
+
+            switch result {
+            case .success(let response):
+                if response.status {
+                    self?.errorMessage = nil
+                    self?.user = response.items // The user object
+                    self?.handleUserData()
+                    onsuccess(response.message)
+                } else {
+                    // Use the centralized error handling component
+                    self?.handleAPIError(.customError(message: response.message))
+                    
+                    // Handle status code 405 using ErrorHandler
+                    self?.errorHandling.handleStatusCode405(code: response.code, errorMessage: response.message, updateErrorMessage: { errorMessage in
+                        self?.errorMessage = errorMessage
+                    }, onLogout: {
+                        self?.userSettings.logout()
+                    })
+                }
+            case .failure(let error):
+                // Use the centralized error handling component
+                self?.handleAPIError(error)
+            }
+        }
+    }
 }
 
 extension UserViewModel {
@@ -602,3 +640,39 @@ extension UserViewModel {
 //    }
 }
 
+extension UserViewModel {
+    func refreshFcmToken(params: [String: Any], onsuccess: @escaping () -> Void) {
+        guard let token = userSettings.token else {
+            self.handleAPIError(.customError(message: LocalizedStringKey.tokenError))
+            return
+        }
+        
+        isLoading = true
+        errorMessage = nil
+        let endpoint = DataProvider.Endpoint.refreshFcmToken(params: params, token: token)
+        
+        DataProvider.shared.request(endpoint: endpoint, responseType: SingleAPIResponse<User>.self)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    // Use the centralized error handling component
+                    self.handleAPIError(error)
+                    print("sssss \(error)")
+                }
+            }, receiveValue: { [weak self] (response: SingleAPIResponse<User>) in
+                print("eeee \(response)")
+                if response.status {
+                    self?.user = response.items
+                    self?.errorMessage = nil
+                    onsuccess()
+                } else {
+                    // Use the centralized error handling component
+                    self?.handleAPIError(.customError(message: response.message))
+                }
+                self?.isLoading = false
+            })
+            .store(in: &cancellables)
+    }
+}

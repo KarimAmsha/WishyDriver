@@ -23,10 +23,10 @@ struct CategoriesView: View {
                     HStack(spacing: 12) {
                         ForEach(0..<10) { index in
                             VStack(spacing: 8) {
-                                AsyncImageView(width: 20, height: 20, cornerRadius: 0, imageURL: "".toURL(), systemPlaceholder: "photo")
-                                    .padding(25)
-                                    .roundedBackground(cornerRadius: 35, strokeColor: .grayEBF0FF(), lineWidth: 1)
-                                    .padding(.bottom, 4)
+//                                AsyncImageView(width: 20, height: 20, cornerRadius: 0, imageURL: "".toURL(), systemPlaceholder: "photo")
+//                                    .padding(25)
+//                                    .roundedBackground(cornerRadius: 35, strokeColor: .grayEBF0FF(), lineWidth: 1)
+//                                    .padding(.bottom, 4)
                                 
                                 Text("Item \(index + 1)")
                                     .customFont(weight: .light, size: 10)
@@ -45,9 +45,9 @@ struct CategoriesView: View {
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)], spacing: 16) {
                             ForEach(items, id: \.self) { index in
                                 VStack(spacing: 8) {
-                                    AsyncImageView(width: 150, height: 150, cornerRadius: 10, imageURL: URL(string: "https://example.com/image\(index).jpg"), systemPlaceholder: "photo")
-                                        .cornerRadius(4)
-                                        .padding(6)
+//                                    AsyncImageView(width: 150, height: 150, cornerRadius: 10, imageURL: URL(string: "https://example.com/image\(index).jpg"), systemPlaceholder: "photo")
+//                                        .cornerRadius(4)
+//                                        .padding(6)
 
                                     Text("Item \(index)")
                                         .customFont(weight: .bold, size: 14)
