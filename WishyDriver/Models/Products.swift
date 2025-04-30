@@ -29,6 +29,8 @@ struct Products: Codable, Hashable {
     let qty: Int?
     let total: Double?
     let totalDiscount: Double?
+    let variation_name: String?
+    let variation_sku: String?
 
     var isFavorite: Bool {
         return favorite_id != nil && !favorite_id!.isEmpty
@@ -61,7 +63,8 @@ struct Products: Codable, Hashable {
         case qty
         case total
         case totalDiscount
-
+        case variation_name
+        case variation_sku
     }
     
     // Computed property to return name based on app language
@@ -128,6 +131,8 @@ struct OrderProducts: Codable, Hashable {
     let enDescription: String?
     let by: String?
     let qty: Int?
+    let variation_name: String?
+    let variation_sku: String?
 
     var formattedCreateDate: String? {
         guard let createat = createat else { return nil }
@@ -153,6 +158,8 @@ struct OrderProducts: Codable, Hashable {
         case enDescription
         case by
         case qty
+        case variation_name
+        case variation_sku
     }
     
     // Computed property to return name based on app language
