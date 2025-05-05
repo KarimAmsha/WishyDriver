@@ -91,7 +91,7 @@ struct SMSVerificationView: View {
 
         }
         .padding(24)
-        .dismissKeyboard()
+        .dismissKeyboardOnTap()
         .navigationBarBackButtonHidden()
         .background(Color.background())
         .toolbar {

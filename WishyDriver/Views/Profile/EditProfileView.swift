@@ -150,7 +150,7 @@ struct EditProfileView: View {
                 }
             }
         }
-        .dismissKeyboard()
+        .dismissKeyboardOnTap()
         .fullScreenCover(isPresented: $mediaPickerViewModel.isPresentingImagePicker, content: {
             ImagePicker(sourceType: mediaPickerViewModel.sourceType, completionHandler: mediaPickerViewModel.didSelectImage)
         })

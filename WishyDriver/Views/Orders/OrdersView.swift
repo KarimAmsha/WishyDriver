@@ -52,7 +52,7 @@ struct OrdersView: View {
         }
         .navigationTitle("")
         .background(Color.grayF9F9F9())
-        .dismissKeyboard()
+        .dismissKeyboardOnTap()
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 VStack {
